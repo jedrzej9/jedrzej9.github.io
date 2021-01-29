@@ -1,0 +1,882 @@
+/*  import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* custom scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #4361EE;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #560BAD;
+}
+
+/* all similar content styling codes */
+section{
+    padding: 100px 0;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+.about, .projects, .hobbies, .experience, .recommendations, .contact, footer{
+    font-family: 'Poppins', sans-serif;
+}
+.about .about-content, 
+.projects .projects-carousel,
+.skills .skills-content,
+.contact{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+section .title::after{
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    color: #4361EE;
+    padding: 0 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+/* navbar styling */
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+}
+.navbar.sticky{
+    padding: 15px 0;
+    background: #4361EE;
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo{
+    visibility: hidden;
+}
+.navbar.sticky .logo a{
+    visibility: visible;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+}
+.navbar .logo a span{
+    color: #fff;
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+    color: #4361EE;
+}
+.navbar.sticky .menu li a:hover{
+    color: #fff;
+}
+
+/* menu btn styling */
+.menu-btn{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: #4361EE;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    border-bottom-width: 2px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.scroll-up-btn:hover{
+    filter: brightness(90%);
+}
+
+/* home section styling */
+.home{
+    display: flex;
+    background: url("images/duo_color_gimp.png") no-repeat right;
+    background-color: #B5179E;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    background-size: contain;
+    background-attachment: fixed;
+    font-family: 'Ubuntu', sans-serif;
+}
+.home .max-width{
+    margin: auto 0 auto 30px;
+}
+.home .home-content .text-1{
+    font-size: 27px;
+}
+.home .home-content .text-2{
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+.home .home-content .text-3{
+    font-size: 40px;
+    margin: 5px 0;
+}
+/* .home .home-content .text-3 span{
+    color: #4361EE;
+    font-weight: 500;
+} */
+.home .home-content a{
+    display: inline-block;
+    color: #fff;
+    font-size: 35px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    font-weight: 400;
+    transition: all 0.3s ease;
+}
+.home .home-content a:hover{
+    color: #4361EE;
+    background: none;
+}
+
+/* about section styling */
+.about .title::after{
+    content: "who i am";
+}
+.about .about-content .left{
+    width: 45%;
+}
+.about .about-content .left img{
+    height: 80%;
+    width: 80%;
+    min-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.about .about-content .right{
+    width: 55%;
+}
+.about .about-content .right .text{
+    font-family: Inconsolata, monospace;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.about .about-content .right .text span{
+    font-family: Inconsolata, monospace;
+}
+.about .about-content .right p{
+    text-align: justify;
+}
+.about .about-content .right a{
+    display: inline-block;
+    background: #4361EE;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid #4361EE;
+    transition: all 0.3s ease;
+}
+.about .about-content .right .quote{
+    font-size: 1.5rem;
+    margin-top: 4rem;
+    text-align: end;
+}
+.about .about-content .right a:hover{
+    color: #4361EE;
+    background: none;
+}
+
+/* My projects section styling */
+.projects, .experience, .contact{
+    color:#fff;
+    background: #B5179E;
+}
+.projects .title::before,
+.contact .title::before{
+    background: #fff;
+}
+.projects .title::after,
+.contact .title::after{
+    background: #B5179E;
+    content: "things i did";
+}
+.projects .projects-nav{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+.projects .title {
+    margin-bottom: 0px;
+}
+.btn-2 {
+    margin: 10px;
+    padding: 10px 0px;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    transition: .3s;
+}
+.btn-2:after{
+    position: absolute;
+    transition: .3s;
+    content: '';
+    width: 0;
+    left: 50%;
+    bottom: 0;
+    height: 3px;
+    background: #f7f7f7;
+}
+.btn-2:hover{
+    cursor: pointer;
+}
+.btn-2:hover::after{
+    width: 100%;
+    left: 0;
+}
+.hobbies .btn-2:after{
+    background: #4361EE;
+}
+.projects .projects-items .card{
+    display: inline-block;
+    width: calc(33% - 20px);
+    background: #8611A6;
+    text-align: center;
+    border-radius: 6px;
+    margin: 10px;
+    padding: 20px 25px;
+    cursor: pointer;
+}
+.projects .projects-items .card:hover{
+    background: #4361EE;
+}
+
+/* ===== hobbies section styling ===== */
+
+.hobbies .hobbies-nav{
+    display: flex;
+    justify-content: center;
+}
+.hobbies .title::after{
+    content: "things i like";
+}
+.hobbies .title{
+    margin-bottom: 0px;
+}
+.hobbies .hobbies-items{
+    position: relative;
+    width: 100%;
+    /* border-width: 7px; */
+    /* border-color: #FFFFFF; */
+    /* border-style: solid; */
+    /* box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.1); */
+    /* cursor: pointer; */
+}
+.hobbies .hobbies-items .card{
+    display: inline-flex;
+    width: calc(33% - 20px);
+    /* background: #4361EE; */
+    /* text-align: center; */
+    border-radius: 6px;
+    padding: 0px;
+    cursor: pointer;
+    
+}
+.hobbies .hobbies-items .card img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* experience section styling */
+
+/* title */
+.experience {
+    background-color: #B5179E;
+}
+.experience .title::after{
+    content: "things i know";
+    background: #B5179E;
+}
+.experience .title{
+    margin-bottom: 0px;
+}
+
+/* vertical timeline */
+.experience ul li {
+    list-style-type: none;
+    position: relative;
+    width: 8px;
+    margin: 0 auto;
+    padding-top: 0px;
+    background: #4361EE;
+}
+.experience ul li:first-of-type {
+    height: 220px;
+    width: 0px;
+    padding-top: 0px;
+}
+.experience ul li:last-of-type{
+    padding-top: 100px;
+}
+.experience ul li::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #4361EE;
+    background: white;
+}
+.experience ul li img{
+    position: relative;
+    z-index: 1;
+}
+#logo_agh{
+    height: 165px;
+    right: 51px;
+    top: 57px;
+}
+#quit {
+    position: absolute;
+    display: inline-block;
+    height: 35px;
+    width: 70px;
+    top: 125px;
+    left: -140px;
+    padding: 6px 8px;
+    background: #4361EE;
+    text-align: center;
+    color: #ffffff;
+    z-index: 0;
+    border-radius: 30px 0 0 30px;
+}
+#logo_pk {
+    height: 150px;
+    right: 70px;
+    top: 130px;
+}
+#logo_company {
+    position: relative;
+    z-index: 1;
+    color: #4361EE;
+    font-size: 110px;
+    right: 50px;
+    top: 50px;
+}
+
+/* boxes on sides */
+.experience ul li div {
+    position: relative;
+    bottom: 60px;
+    width: 400px;
+    padding: 15px;
+    background: #8611A6;
+}
+.experience ul li div::before {
+    content: '';
+    position: absolute;
+    bottom: 7px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+.experience ul li:nth-child(odd) div {
+    left: 100px;
+}
+.experience ul li:nth-child(odd) div::before { 
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent #8611A6 transparent transparent;
+}
+.experience ul li:first-of-type div::before {
+    bottom: 115px;
+}
+.experience ul li:nth-child(even) div {
+    left: -489px;
+}
+.experience ul li:nth-child(even) div::before {
+    right: -15px;
+    border-width: 8px 0 8px 16px;
+    border-color: transparent transparent transparent #8611A6;
+}
+
+/* animation styling */
+.experience ul li div {
+    visibility: hidden;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+  }
+  .experience ul li:nth-child(odd) div {
+    transform: translate3d(100px,0,0);
+  }
+  .experience ul li:nth-child(even) div {
+    transform: translate3d(-100px,0,0);
+  }
+  .experience ul li.in-view div {
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+  }
+  .skills h3{
+      text-align: center;
+      font-weight: 500;
+      font-size: 2rem;
+      margin: 3rem 0;
+  }
+  .skills .grid img{
+      height: 5rem;
+      margin: auto;
+      /* width: 50%; */
+  }
+  .skills .grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas:
+        "zero zero one two three six"
+        "four five nine nine nine six"
+        ".  seven seven eight eight .";
+  }
+  .skills .grid .zero {
+    grid-area: zero;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .skills .grid .one{
+    grid-area: one;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .skills .grid .two{
+    grid-area: two;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.skills .grid .three{
+    grid-area: three;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.skills .grid .four{
+    grid-area: four;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.skills .grid .five{
+    grid-area: five;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.skills .grid .six {
+    grid-area: six;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.skills .grid .six img{
+    height: 13rem;
+}
+.skills .grid .seven {
+    grid-area: seven;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.skills .grid .eight {
+    grid-area: eight;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.skills .grid .nine {
+    grid-area: nine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* teams section styling */
+
+.recommendations .title::after{
+    content: "others about me";
+}
+.recommendations .carousel .card{
+    background: #4361EE;
+    border-radius: 6px;
+    padding: 25px 35px;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.recommendations .carousel .card:hover{
+    background: #4895EF;
+}
+.recommendations .carousel .card .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.recommendations .carousel .card:hover .box{
+    transform: scale(1.05);
+}
+.recommendations .carousel .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.recommendations .carousel .card .text p{
+    font-weight: 600;
+}
+.recommendations .carousel .card img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #4895EF;
+    transition: all 0.3s ease;
+}
+.recommendations .carousel .card:hover img{
+    border-color: #fff;
+}
+.recommendations .owl-dots{
+    text-align: center;
+    margin-top: 20px;
+}
+.recommendations .owl-dot{
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    outline: none!important;
+    border-radius: 50%;
+    border: 2px solid #4361EE!important;
+    transition: all 0.3s ease;
+}
+.recommendations .owl-dot.active{
+    width: 35px;
+    border-radius: 14px;
+}
+.recommendations .owl-dot.active,
+.owl-dot:hover{
+    background: #4361EE!important;
+}
+
+/* contact section styling */
+.contact .title::after{
+    content: "get in touch";
+}
+.contact .contact-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact .contact-content .text{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.contact .contact-content p{
+    text-align: center;
+    width: 50%;
+    padding-bottom: 1rem;
+}
+.contact .contact-content .icons{
+    margin: 10px 0;
+}
+.contact .contact-content .row{
+    display: flex;
+    height: 65px;
+}
+.contact .contact-content .row .info{
+    margin-left: 30px;
+}
+.contact .contact-content .row i{
+    font-size: 25px;
+    color: #4361EE;
+}
+.contact .contact-content .info .head{
+    font-weight: 500;
+}
+/* .contact .contact-content .info .sub-title{
+    color: #333;
+} */
+
+/* footer section styling */
+footer{
+    background: #4361EE;
+    padding: 15px 23px;
+    color: #fff;
+    text-align: center;
+}
+footer span a{
+    color: #4361EE;
+    text-decoration: none;
+}
+footer span a:hover{
+    text-decoration: underline;
+}
+.emoji{
+    font-family: Segoe UI Emoji, Segoe UI Symbol, Symbola, Quivira;
+}
+
+/* responsive media query start */
+@media (max-width: 1300px) {
+    .home .max-width{
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 1104px) {
+    .about .about-content .left img{
+        height: 350px;
+        width: 350px;
+    }
+}
+
+@media (max-width: 991px) {
+    .max-width{
+        padding: 0 50px;
+    }
+}
+@media (max-width: 947px){
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .home .home-content .text-2{
+        font-size: 70px;
+    }
+    .home .home-content .text-3{
+        font-size: 35px;
+    }
+    .home .home-content a{
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+    .max-width{
+        max-width: 930px;
+    }
+    .about .about-content .column{
+        width: 100%;
+    }
+    .about .about-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .about .about-content .right{
+        flex: 100%;
+    }
+    .projects .projects-carousel .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+    .skills .skills-content .column,
+    .contact .contact-content .column{
+        width: 100%;
+        margin-bottom: 35px;
+    }
+    .experience ul li div {
+        width: 250px;
+    }
+    .experience ul li:nth-child(even) div {
+        left: -339px; /*250+45-6*/
+    }
+    #logo_pk {
+        top: 130px;
+    }
+    .experience ul li:first-of-type div::before {
+        bottom: 155px;
+    }
+}
+
+@media (max-width: 690px) {
+    .max-width{
+        padding: 0 23px;
+    }
+    .home .home-content .text-2{
+        font-size: 60px;
+    }
+    .home .home-content .text-3{
+        font-size: 32px;
+    }
+    .home .home-content a{
+        font-size: 20px;
+    }
+    .projects .projects-carousel .card{
+        width: 100%;
+    }
+    .experience ul li {
+        margin-left: 30px;
+    }
+    .experience ul li div {
+        width: calc(100vw - 166px);
+        top: 40px;
+    }
+    .experience ul li:nth-child(even) div {
+        left: 70px;
+    }
+    .experience ul li:nth-child(odd) div {
+        left: 70px;
+    }
+    .experience ul li:nth-child(even) div::before {
+        left: -15px;
+        border-width: 8px 16px 8px 0;
+        border-color: transparent #8611A6 transparent transparent;
+    }
+    .experience ul li::after {
+        width: 100px;
+        height: 100px;
+    }
+    .experience ul li:first-of-type div::before {
+        bottom: 115px;
+    }
+    #logo_agh{
+        height: 100px;
+        right: 31px;
+        top: 117px;
+    }
+    #logo_pk {
+        height: 100px;
+        right: 46px;
+    }
+    #logo_company {
+        font-size: 60px;
+        right: 27px;
+    }
+}
+
+@media (max-width: 500px) {
+    .home .home-content .text-2{
+        font-size: 50px;
+    }
+    .home .home-content .text-3{
+        font-size: 27px;
+    }
+    .about .about-content .right .text,
+    .skills .skills-content .left .text{
+        font-size: 19px;
+    }
+    .contact .right form .fields{
+        flex-direction: column;
+    }
+    .contact .right form .name,
+    .contact .right form .email{
+        margin: 0;
+    }
+    .scroll-up-btn{
+        right: 15px;
+        bottom: 15px;
+        height: 38px;
+        width: 35px;
+        font-size: 23px;
+        line-height: 38px;
+    }
+}

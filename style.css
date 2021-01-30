@@ -188,10 +188,6 @@ section .title::after{
     font-size: 40px;
     margin: 5px 0;
 }
-/* .home .home-content .text-3 span{
-    color: #4361EE;
-    font-weight: 500;
-} */
 .home .home-content a{
     display: inline-block;
     color: #fff;
@@ -273,7 +269,6 @@ section .title::after{
 .projects .projects-nav{
     display: flex;
     justify-content: center;
-    /* align-items: center; */
 }
 .projects .title {
     margin-bottom: 0px;
@@ -336,17 +331,10 @@ section .title::after{
 .hobbies .hobbies-items{
     position: relative;
     width: 100%;
-    /* border-width: 7px; */
-    /* border-color: #FFFFFF; */
-    /* border-style: solid; */
-    /* box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.1); */
-    /* cursor: pointer; */
 }
 .hobbies .hobbies-items .card{
     display: inline-flex;
     width: calc(33% - 20px);
-    /* background: #4361EE; */
-    /* text-align: center; */
     border-radius: 6px;
     padding: 0px;
     cursor: pointer;
@@ -500,7 +488,6 @@ section .title::after{
   .skills .grid img{
       height: 5rem;
       margin: auto;
-      /* width: 50%; */
   }
   .skills .grid {
     display: grid;
@@ -785,7 +772,7 @@ footer span a:hover{
         width: 250px;
     }
     .experience ul li:nth-child(even) div {
-        left: -339px; /*250+45-6*/
+        left: -339px;
     }
     #logo_pk {
         top: 130px;

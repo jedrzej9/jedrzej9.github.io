@@ -663,25 +663,23 @@ section .title::after{
     padding-bottom: 1rem;
 }
 .contact .contact-content .icons{
+    text-align: center;
     margin: 10px 0;
-}
-.contact .contact-content .row{
-    display: flex;
-    height: 65px;
 }
 .contact .contact-content .row .info{
     margin-left: 30px;
 }
-.contact .contact-content .row i{
+.contact .contact-content i{
+    margin-top: 1rem;
     font-size: 25px;
     color: #4361EE;
+}
+.contact .contact-content i:first-of-type{
+    margin-top: none;
 }
 .contact .contact-content .info .head{
     font-weight: 500;
 }
-/* .contact .contact-content .info .sub-title{
-    color: #333;
-} */
 
 /* footer section styling */
 footer{

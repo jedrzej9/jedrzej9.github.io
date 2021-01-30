@@ -836,6 +836,15 @@ footer span a:hover{
         font-size: 60px;
         right: 27px;
     }
+    .skills .grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+        grid-template-areas:
+            "zero zero one two"
+            "three four five six"
+            "nine nine nine six"
+            "seven seven eight eight";
+      }
 }
 
 @media (max-width: 500px) {
@@ -864,4 +873,16 @@ footer span a:hover{
         font-size: 23px;
         line-height: 38px;
     }
+    .skills .grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+        grid-template-areas:
+            "zero zero"
+            "one two"
+            "three four"
+            "five six"
+            "seven seven"
+            "eight eight"
+            "nine nine";
+      }
 }

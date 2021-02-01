@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Michał Jędrzejek</title>
-    <link rel="icon" type="image/png" href="images/favicon.png"/>
+    <link rel="icon" type="image/png" href="images/favicon.png" />
     <link rel="stylesheet" href="style.css">
+    <link href="lightbox.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
@@ -102,7 +103,7 @@
                 <a class="btn btn-2 project-item" data-filter=".web">Web Development</a>
                 <a class="btn btn-2 project-item" data-filter=".game">Game Development</a>
                 <a class="btn btn-2 project-item" data-filter=".data">Databases</a>
-                <a class="btn btn-2 project-item" data-filter=".embbeded">Embbeded</a>
+                <a class="btn btn-2 project-item" data-filter=".embbeded">Embedded</a>
             </div>
 
             <div class="projects-items">
@@ -128,7 +129,7 @@
                     <p>Database</p>
                 </div>
                 <div class="card mix embbeded">
-                    <p>Embbeded</p>
+                    <p>Embedded</p>
                 </div>
             </div>
         </div>
@@ -147,21 +148,36 @@
             </div>
 
             <div class="hobbies-items">
-                <img src="images/hobbie_travel2.jpg" alt="" class="card mix traveling">
-                <img src="images/hobbie_travel3.jpg" alt="" class="card mix traveling">
-                <img src="images/hobbie_photo3.jpg" alt="" class="card mix photo">
-                <img src="images/hobbie_travel4.jpg" alt="" class="card mix traveling">
-                <img src="images/hobbie_photo2.jpg" alt="" class="card mix photo">
-                <img src="images/hobbie_photo4.jpg" alt="" class="card mix photo">
-                <img src="images/hobbie_snowboarding.jpg" alt="" class="card mix snowboarding">
-                <img src="images/hobbie_snowboarding2.jpg" alt="" class="card mix snowboarding">
-                <img src="images/hobbie_photo5.jpg" alt="" class="card mix photo">
-                <img src="images/hobbie_running.jpg" alt="" class="card mix running">
-                <img src="images/hobbie_running2.jpg" alt="" class="card mix running">
-                <img src="images/hobbie_travel.jpg" alt="" class="card mix traveling">
-                <img src="images/hobbie_travel5.JPG" alt="" class="card mix traveling">
-                <img src="images/hobbie_travel6.JPG" alt="" class="card mix traveling">
-                <img src="images/hobbie_photo.jpg" alt="" class="card mix photo">
+                <a href="images/hobbie_travel2.jpg" data-lightbox="image-1"><img src="images/hobbie_travel2.jpg" alt=""
+                        class="card mix traveling"></a>
+                <a href="images/hobbie_travel3.jpg" data-lightbox="image-2"><img src="images/hobbie_travel3.jpg" alt=""
+                        class="card mix traveling"></a>
+                <a href="images/hobbie_photo3.jpg" data-lightbox="image-3"><img src="images/hobbie_photo3.jpg" alt=""
+                        class="card mix photo"></a>
+                <a href="images/hobbie_travel4.jpg" data-lightbox="image-4"><img src="images/hobbie_travel4.jpg" alt=""
+                        class="card mix traveling"></a>
+                <a href="images/hobbie_photo2.jpg" data-lightbox="image-5"><img src="images/hobbie_photo2.jpg" alt=""
+                        class="card mix photo"></a>
+                <a href="images/hobbie_photo4.jpg" data-lightbox="image-6"><img src="images/hobbie_photo4.jpg" alt=""
+                        class="card mix photo"></a>
+                <a href="images/hobbie_snowboarding.jpg" data-lightbox="image-7"><img
+                        src="images/hobbie_snowboarding.jpg" alt="" class="card mix snowboarding"></a>
+                <a href="images/hobbie_snowboarding2.jpg" data-lightbox="image-8"><img
+                        src="images/hobbie_snowboarding2.jpg" alt="" class="card mix snowboarding"></a>
+                <a href="images/hobbie_photo5.jpg" data-lightbox="image-9"><img src="images/hobbie_photo5.jpg" alt=""
+                        class="card mix photo"></a>
+                <a href="images/hobbie_running.jpg" data-lightbox="image-10"><img src="images/hobbie_running.jpg" alt=""
+                        class="card mix running"></a>
+                <a href="images/hobbie_running2.jpg" data-lightbox="image-11"><img src="images/hobbie_running2.jpg"
+                        alt="" class="card mix running"></a>
+                <a href="images/hobbie_travel.jpg" data-lightbox="image-12"><img src="images/hobbie_travel.jpg" alt=""
+                        class="card mix traveling"></a>
+                <a href="images/hobbie_travel5.JPG" data-lightbox="image-13"><img src="images/hobbie_travel5.JPG" alt=""
+                        class="card mix traveling"></a>
+                <a href="images/hobbie_travel6.JPG" data-lightbox="image-14"><img src="images/hobbie_travel6.JPG" alt=""
+                        class="card mix traveling"></a>
+                <a href="images/hobbie_photo.jpg" data-lightbox="image-15"><img src="images/hobbie_photo.jpg" alt=""
+                        class="card mix photo"></a>
             </div>
         </div>
     </section>
@@ -315,8 +331,9 @@
             reserved.</span>
     </footer>
 
-    <script src="script.js"></script>
     <script src="mixitup.min.js"></script>
+    <script src="script.js"></script>
+    <script src="lightbox.js"></script>
 </body>
 
 </html>

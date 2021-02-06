@@ -237,16 +237,18 @@ section .title::after{
     font-size: 20px;
     font-weight: 500;
     padding: 10px 30px;
-    margin-top: 20px;
     border-radius: 6px;
     border: 2px solid #4361EE;
     transition: all 0.3s ease;
 }
-.about .about-content .right .quote{
+.about .about-content .right #extra-margin-top {
+    margin-top: 20px;
+}
+/* .about .about-content .right .quote{
     font-size: 1.5rem;
     margin-top: 4rem;
     text-align: end;
-}
+} */
 .about .about-content .right a:hover{
     color: #4361EE;
     background: none;
@@ -283,11 +285,7 @@ section .title::after{
     font-size: 30px;
     font-weight: bold;
     text-decoration: none;
-    /* color: #333; */
   }
-/* .about  .popup .close:hover {
-    color: #06D85F;
-  } */
 .about  .popup .content {
     max-height: 30%;
     overflow: auto;

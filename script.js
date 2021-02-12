@@ -82,6 +82,7 @@ $(document).ready(function () {
         }
     });
 
+    MicroModal.init();
     // Link active projects
     // const linkProjects = document.querySelectorAll('.projects')
 

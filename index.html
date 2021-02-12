@@ -7,7 +7,6 @@
     <title>Michał Jędrzejek</title>
     <link rel="icon" type="image/png" href="images/favicon.png" />
     <link rel="stylesheet" href="style.css">
-    <link href="lightbox.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
@@ -93,8 +92,10 @@
                         <div class="popup">
                             <a class="close" href="#about">&times;</a>
                             <div class="content">
-                                <a href="images/CV/Michał_Jędrzejek_CV_ENG.pdf" download target="_blank" rel="noopener noreferrer">ENG</a>
-                                <a href="images/CV/Michał_Jędrzejek_CV_PL.pdf" download target="_blank" rel="noopener noreferrer">PL</a>
+                                <a href="images/CV/Michał_Jędrzejek_CV_ENG.pdf" download target="_blank"
+                                    rel="noopener noreferrer">ENG</a>
+                                <a href="images/CV/Michał_Jędrzejek_CV_PL.pdf" download target="_blank"
+                                    rel="noopener noreferrer">PL</a>
                             </div>
                         </div>
                     </div>
@@ -108,7 +109,7 @@
     <section class="projects" id="projects">
         <div class="max-width">
             <h2 class="title">
-                My Projects (TO DO)</h2>
+                My Projects</h2>
             <div class="projects-nav">
                 <!-- <button type="button" class="project-item" data-filter="all">All</button> -->
                 <a class="btn btn-2 project-item" data-filter=".software">Software Development</a>
@@ -119,29 +120,54 @@
             </div>
 
             <div class="projects-items">
+
                 <div class="card mix software">
-                    <p>Software</p>
+                    <a data-micromodal-trigger="software-1"><img src="images/projects/stack.png" alt=""></a>
+                    <div class="modal micromodal-slide" id="software-1" aria-hidden="true">
+                        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+                            <div id="modal-container" class="modal__container" role="dialog" aria-modal="true"
+                                aria-labelledby="modal-1-title">
+                                <header id="modal-header" class="modal__header">
+                                    <h2 class="modal__title">
+                                        TO DO
+                                    </h2>
+                                    <button class="modal__close" aria-label="Close modal"
+                                        data-micromodal-close></button>
+                                </header>
+                                <div id="modal-content-content" class="modal-content-content">
+                                    <div id="modal-content" class="modal__content" style="display:none;">
+                                        <!--    modal content       -->
+                                    </div>
+                                    <footer id="modal-footer" class="modal__footer">
+                                        <button class="modal__btn" data-micromodal-close
+                                            aria-label="Close this dialog window">Close</button>
+                                    </footer>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="card mix software">
-                    <p>Software</p>
+                    <a data-micromodal-trigger="software-1"><img src="images/projects/numerical_methods.png" alt=""></a>
                 </div>
-                <div class="card mix software">
+                <!-- <div class="card mix software">
                     <p>Software</p>
-                </div>
+                </div> -->
                 <div class="card mix web">
-                    <p>Web</p>
+                    <a data-micromodal-trigger="software-1"><img src="images/projects/web.png" alt=""></a>
                 </div>
-                <div class="card mix game">
+                <!-- <div class="card mix game">
                     <p>Game</p>
                 </div>
                 <div class="card mix game">
                     <p>Game</p>
-                </div>
+                </div> -->
                 <div class="card mix data">
-                    <p>Database</p>
+                    <a data-micromodal-trigger="software-1"><img src="images/projects/database.png" alt=""></a>
                 </div>
                 <div class="card mix embbeded">
-                    <p>Embedded</p>
+                    <a data-micromodal-trigger="software-1"><img src="images/projects/embbeded.jpg" alt=""></a>
                 </div>
             </div>
         </div>
@@ -160,36 +186,35 @@
             </div>
 
             <div class="hobbies-items">
-                <a href="images/hobbie_travel2.jpg" data-lightbox="image-1"><img src="images/hobbie_travel2.jpg" alt=""
+                <a href="images/hobbie_travel2.jpg"><img src="images/hobbie_travel2.jpg" alt=""
                         class="card mix traveling"></a>
-                <a href="images/hobbie_travel3.jpg" data-lightbox="image-2"><img src="images/hobbie_travel3.jpg" alt=""
+                <a href="images/hobbie_travel3.jpg"><img src="images/hobbie_travel3.jpg" alt=""
                         class="card mix traveling"></a>
-                <a href="images/hobbie_photo3.jpg" data-lightbox="image-3"><img src="images/hobbie_photo3.jpg" alt=""
+                <a href="images/hobbie_photo3.jpg"><img src="images/hobbie_photo3.jpg" alt=""
                         class="card mix photo"></a>
-                <a href="images/hobbie_travel4.jpg" data-lightbox="image-4"><img src="images/hobbie_travel4.jpg" alt=""
+                <a href="images/hobbie_travel4.jpg"><img src="images/hobbie_travel4.jpg" alt=""
                         class="card mix traveling"></a>
-                <a href="images/hobbie_photo2.jpg" data-lightbox="image-5"><img src="images/hobbie_photo2.jpg" alt=""
+                <a href="images/hobbie_photo2.jpg"><img src="images/hobbie_photo2.jpg" alt=""
                         class="card mix photo"></a>
-                <a href="images/hobbie_photo4.jpg" data-lightbox="image-6"><img src="images/hobbie_photo4.jpg" alt=""
+                <a href="images/hobbie_photo4.jpg"><img src="images/hobbie_photo4.jpg" alt=""
                         class="card mix photo"></a>
-                <a href="images/hobbie_snowboarding.jpg" data-lightbox="image-7"><img
-                        src="images/hobbie_snowboarding.jpg" alt="" class="card mix snowboarding"></a>
-                <a href="images/hobbie_snowboarding2.jpg" data-lightbox="image-8"><img
-                        src="images/hobbie_snowboarding2.jpg" alt="" class="card mix snowboarding"></a>
-                <a href="images/hobbie_photo5.jpg" data-lightbox="image-9"><img src="images/hobbie_photo5.jpg" alt=""
+                <a href="images/hobbie_snowboarding.jpg"><img src="images/hobbie_snowboarding.jpg" alt=""
+                        class="card mix snowboarding"></a>
+                <a href="images/hobbie_snowboarding2.jpg"><img src="images/hobbie_snowboarding2.jpg" alt=""
+                        class="card mix snowboarding"></a>
+                <a href="images/hobbie_photo5.jpg"><img src="images/hobbie_photo5.jpg" alt=""
                         class="card mix photo"></a>
-                <a href="images/hobbie_running.jpg" data-lightbox="image-10"><img src="images/hobbie_running.jpg" alt=""
+                <a href="images/hobbie_running.jpg"><img src="images/hobbie_running.jpg" alt=""
                         class="card mix running"></a>
-                <a href="images/hobbie_running2.jpg" data-lightbox="image-11"><img src="images/hobbie_running2.jpg"
-                        alt="" class="card mix running"></a>
-                <a href="images/hobbie_travel.jpg" data-lightbox="image-12"><img src="images/hobbie_travel.jpg" alt=""
+                <a href="images/hobbie_running2.jpg"><img src="images/hobbie_running2.jpg" alt=""
+                        class="card mix running"></a>
+                <a href="images/hobbie_travel.jpg"><img src="images/hobbie_travel.jpg" alt=""
                         class="card mix traveling"></a>
-                <a href="images/hobbie_travel5.JPG" data-lightbox="image-13"><img src="images/hobbie_travel5.JPG" alt=""
+                <a href="images/hobbie_travel5.JPG"><img src="images/hobbie_travel5.JPG" alt=""
                         class="card mix traveling"></a>
-                <a href="images/hobbie_travel6.JPG" data-lightbox="image-14"><img src="images/hobbie_travel6.JPG" alt=""
+                <a href="images/hobbie_travel6.JPG"><img src="images/hobbie_travel6.JPG" alt=""
                         class="card mix traveling"></a>
-                <a href="images/hobbie_photo.jpg" data-lightbox="image-15"><img src="images/hobbie_photo.jpg" alt=""
-                        class="card mix photo"></a>
+                <a href="images/hobbie_photo.jpg"><img src="images/hobbie_photo.jpg" alt="" class="card mix photo"></a>
             </div>
         </div>
     </section>
@@ -344,8 +369,8 @@
     </footer>
 
     <script src="mixitup.min.js"></script>
-    <script src="lightbox.js"></script>
     <script src="script.js"></script>
+    <script src="micromodal.min.js"></script>
 </body>
 
 </html>

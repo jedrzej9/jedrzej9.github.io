@@ -111,7 +111,7 @@
             <h2 class="title">
                 My Projects</h2>
             <div class="projects-nav">
-                <!-- <button type="button" class="project-item" data-filter="all">All</button> -->
+                <a class="btn btn-2 project-item" data-filter="all">All</a>
                 <a class="btn btn-2 project-item" data-filter=".software">Software Development</a>
                 <a class="btn btn-2 project-item" data-filter=".web">Web Development</a>
                 <a class="btn btn-2 project-item" data-filter=".game">Game Development</a>
@@ -120,34 +120,55 @@
             </div>
 
             <div class="projects-items">
-
                 <div class="card mix software">
                     <a data-micromodal-trigger="software-1"><img src="images/projects/stack.png" alt=""></a>
                     <div class="modal micromodal-slide" id="software-1" aria-hidden="true">
                         <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-                            <div id="modal-container" class="modal__container" role="dialog" aria-modal="true"
+                            <div class="modal__container" role="dialog" aria-modal="true"
                                 aria-labelledby="modal-1-title">
-                                <header id="modal-header" class="modal__header">
-                                    <h2 class="modal__title">
-                                        TO DO
+                                <header class="modal__header">
+                                    <h2 class="modal__title" id="modal-1-title">
+                                        Stack implementation using void pointers
                                     </h2>
                                     <button class="modal__close" aria-label="Close modal"
                                         data-micromodal-close></button>
                                 </header>
-                                <div id="modal-content-content" class="modal-content-content">
-                                    <div id="modal-content" class="modal__content" style="display:none;">
-                                        <!--    modal content       -->
-                                    </div>
-                                    <footer id="modal-footer" class="modal__footer">
-                                        <button class="modal__btn" data-micromodal-close
-                                            aria-label="Close this dialog window">Close</button>
-                                    </footer>
-                                </div>
+                                <main class="modal__content" id="modal-1-content">
+                                    <p>
+                                        Try hitting the <code>tab</code> key and notice how the focus stays within the
+                                        modal itself. Also, <code>esc</code> to close modal.
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores
+                                        reprehenderit voluptatibus exercitationem doloribus unde tenetur eveniet
+                                        veritatis deserunt in velit mollitia aspernatur nostrum quaerat accusamus iusto
+                                        voluptas, facilis, ratione corrupti.
+                                    </p>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam minus pariatur
+                                        explicabo, at consectetur expedita nobis. Itaque modi, iure ab labore delectus,
+                                        fugit molestias magni provident dolorum, consequatur dicta illo! Lorem ipsum
+                                        dolor sit, amet consectetur adipisicing elit. Rerum asperiores, iusto nostrum
+                                        ullam ipsam ab laudantium quia excepturi ut alias minima id hic natus corrupti
+                                        sed ducimus earum inventore? Nemo!
+                                    </p>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione nostrum fuga
+                                        distinctio laborum doloribus quos omnis dicta asperiores! Architecto rerum
+                                        quisquam iusto alias sint magnam, vero numquam eos molestias eum.
+                                        Nesciunt maiores vel consequuntur modi architecto accusamus? Illum eligendi
+                                        fuga, officia exercitationem culpa dolorum beatae, pariatur libero odio omnis
+                                        vero corrupti et nobis ipsam suscipit vitae tenetur placeat dolorem? Iusto.
+                                    </p>
+                                </main>
+                                <footer class="modal__footer">
+                                    <!-- <button class="modal__btn modal__btn-primary">Continue</button> -->
+                                    <button class="modal__btn" data-micromodal-close
+                                        aria-label="Close this dialog window">Close</button>
+                                </footer>
                             </div>
                         </div>
                     </div>
-
                 </div>
+
                 <div class="card mix software">
                     <a data-micromodal-trigger="software-1"><img src="images/projects/numerical_methods.png" alt=""></a>
                 </div>
@@ -362,14 +383,17 @@
     </section>
 
     <!-- footer section start -->
-    <footer>
-        <span>Made with <span class="emoji">&#10084;</span> in Kraków | <span class="far fa-copyright"></span> 2021 All
-            rights
-            reserved.</span>
-    </footer>
+    <div class="page-footer">
+        <footer>
+            <span>Made with <span class="emoji">&#10084;</span> in Kraków | <span class="far fa-copyright"></span> 2021 All
+                rights
+                reserved.</span>
+        </footer>
+    </div>
 
     <script src="mixitup.min.js"></script>
     <script src="script.js"></script>
+    <script src="zooming.js"></script>
     <script src="micromodal.min.js"></script>
 </body>
 

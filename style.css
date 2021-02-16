@@ -81,7 +81,7 @@ section .title::after{
 .navbar{
     position: fixed;
     width: 100%;
-    z-index: 999;
+    z-index: 99;
     padding: 30px 0;
     font-family: 'Ubuntu', sans-serif;
     transition: all 0.3s ease;
@@ -361,107 +361,61 @@ section .title::after{
     background: #4361EE;
 }
 
-.modal__overlay {
+/**************************\
+  Basic Modal Styles
+\**************************/
+  
+  .modal__overlay {
     position: fixed;
+    z-index: 100;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0,0,0,0.75);
+    background: rgba(0,0,0,0.6);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index:3;
-  } 
+  }
   
   .modal__container {
-    background-color: transparent;
-    padding: 0px;
-    max-width: 740px;
-    height: 75vh;
-    width: 50%;
-    border-radius: 0px;
-    overflow: hidden;
+    background-color: #fff;
+    padding: 30px;
+    max-width: 75%;
+    max-height: 82%;
+    border-radius: 4px;
+    overflow-y: auto;
     box-sizing: border-box;
   }
   
   .modal__header {
-    position: relative;
-    display: block;
-    height: 30px;
-    margin-bottom: 0px;
-    padding: 30px;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-    background: #4361EE;
-  }
-  
-  @supports (display: flex) {
-      
-      .modal__header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-        height:initial;
-      }
-      
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   
   .modal__title {
-    position: absolute;
-    top: 20px;
-    left: 20px;
     margin-top: 0;
     margin-bottom: 0;
     font-weight: 600;
     font-size: 1.25rem;
     line-height: 1.25;
-    color: #f7f7f7;
+    color: #00449e;
     box-sizing: border-box;
   }
   
   .modal__close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
     background: transparent;
     border: 0;
-    cursor: pointer;
-    margin: 0px;
-    padding: 0px;
-  }
-  
-  @supports (display: flex) {
-      
-    .modal__title {
-        position: static;
-    }
-      
-    .modal__close {
-        position: static;
-    }
-    
   }
   
   .modal__header .modal__close:before { content: "\2715"; }
   
-  .modal-content-content{
-    padding: 30px;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    background: #fff;
-  }
-  
   .modal__content {
-    margin: 0px 0px 20px 0px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
     color: rgba(0,0,0,.8);
-    overflow-y: auto;
-    overflow-x: hidden;
-    padding: 0px 20px 0px 0px;
-  }
-  
-  .modal__content p {
-    margin-top: 0px;
   }
   
   .modal__btn {
@@ -470,7 +424,7 @@ section .title::after{
     padding-right: 1rem;
     padding-top: .5rem;
     padding-bottom: .5rem;
-    background-color: #f7f7f7;
+    background-color: #e6e6e6;
     color: rgba(0,0,0,.8);
     border-radius: .25rem;
     border-style: none;
@@ -492,8 +446,13 @@ section .title::after{
     transition: transform .25s ease-out,-webkit-transform .25s ease-out;
   }
   
+  .modal__btn:focus, .modal__btn:hover {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+  
   .modal__btn-primary {
-    background-color: #4361EE;
+    background-color: #00449e;
     color: #fff;
   }
   
@@ -849,17 +808,17 @@ section .title::after{
 }
 
 /* footer section styling */
-footer{
+.page-footer footer{
     background: #4361EE;
     padding: 15px 23px;
     color: #fff;
     text-align: center;
 }
-footer span a{
+.page-footer footer span a{
     color: #4361EE;
     text-decoration: none;
 }
-footer span a:hover{
+.page-footer footer span a:hover{
     text-decoration: underline;
 }
 .emoji{
@@ -1073,10 +1032,9 @@ footer span a:hover{
       }
 }
 
-/**************************
+/**************************\
   Demo Animation Style
-**************************/
-
+\**************************/
 @keyframes mmfadeIn {
     from { opacity: 0; }
       to { opacity: 1; }
@@ -1124,83 +1082,4 @@ footer span a:hover{
 .micromodal-slide .modal__container,
 .micromodal-slide .modal__overlay {
   will-change: transform;
-}
-
-/**************************
-  Custom styles for individual modals
-**************************/
-
-.modal__container button {
-	outline: none;
-	cursor: pointer !important;
-}
-
-.modal__container h2.modal__title {
-	color: #f7f7f7;
-}
-
-.modal__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.modal__title {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-weight: 600;
-  font-size: 1.25rem;
-  line-height: 1.25;
-  color: #00449e;
-  box-sizing: border-box;
-}
-
-.modal__close {
-  font-size: 24px;
-}
-
-.modal__content {
-  color: rgba(0,0,0,.8);
-}
-
-.modal__btn {
-  padding: 10px 15px;
-  background-color: #e6e6e6;
-  border-radius: 4px;
-  -webkit-appearance: none;
-}
-
-/**************************
-  Mobile custom styles for individual modals
-**************************/
-
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-	
-	.modal__container {
-	  width: 90% !important;
-	  min-width: 90% !important;
-	}
-	
-	@supports (display: flex) {
-	
-		.modal__container {
-			width: 90% !important;
-			min-width: 90% !important;
-      height: 85vh;
-		}
-		
-	}
-  
-  .modal__header {
-    padding: 20px;
-  }
-  
-  .modal-content-content {
-    padding: 20px;
-  }
-  
-  .modal__content {
-    -webkit-overflow-scrolling: touch;
-  }
-  
 }

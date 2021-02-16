@@ -33,14 +33,6 @@ $(document).ready(function () {
         $('.menu-btn i').toggleClass("active");
     });
 
-    // typing text animation script
-    // var typed = new Typed(".typing", {
-    //     strings: ["Developer", "Blogger", "Designer", "Freelancer"],
-    //     typeSpeed: 100,
-    //     backSpeed: 60,
-    //     loop: true
-    // });
-
     var typed = new Typed(".typing", {
         strings: ["Student", "Software Developer", "Game Developer", "Web Developer"],
         typeSpeed: 100,
@@ -83,17 +75,9 @@ $(document).ready(function () {
     });
 
     MicroModal.init();
-    // Link active projects
-    // const linkProjects = document.querySelectorAll('.projects')
 
-    // function activeProjects(){
-    //     if(linkProjects){
-    //         linkProjects.forEach(l => l.classList.remove('active-project'))
-    //         this.classList.add('active-project')
-    //     }
-    // }
-    // linkProjects.forEach(l => l.addEventListener('click', activeProjects))
-
+    new Zooming().listen('.hobbies img');
+        
     // ===== MIXITUP FILTER HOBBIES =====
     const mixer_hobbies = mixitup('.hobbies-items', {
         selectors: {

@@ -400,7 +400,7 @@ section .title::after{
     font-weight: 600;
     font-size: 1.25rem;
     line-height: 1.25;
-    color: #00449e;
+    color: #4361EE;
     box-sizing: border-box;
   }
   
@@ -424,8 +424,8 @@ section .title::after{
     padding-right: 1rem;
     padding-top: .5rem;
     padding-bottom: .5rem;
-    background-color: #e6e6e6;
-    color: rgba(0,0,0,.8);
+    background-color: #4361EE;
+    color: #fff;
     border-radius: .25rem;
     border-style: none;
     border-width: 0;
@@ -451,10 +451,10 @@ section .title::after{
     transform: scale(1.05);
   }
   
-  .modal__btn-primary {
-    background-color: #00449e;
+  /* .modal__btn-primary {
+    background-color: #4361EE;
     color: #fff;
-  }
+  } */
   
 /* ===== hobbies section styling ===== */
 

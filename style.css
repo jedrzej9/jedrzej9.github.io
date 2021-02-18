@@ -345,7 +345,7 @@ section .title::after{
     display: inline-block;
     width: calc(33% - 20px);
     background: #8611A6;
-    text-align: center;
+    /* text-align: center; */
     border-radius: 6px;
     margin: 10px;
     padding: 20px 25px;
@@ -391,7 +391,7 @@ section .title::after{
   .modal__header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
   }
   
   .modal__title {
@@ -412,12 +412,45 @@ section .title::after{
   .modal__header .modal__close:before { content: "\2715"; }
   
   .modal__content {
+    /* display: flex; */
+    /* flex-flow: row wrap; */
     margin-top: 2rem;
     margin-bottom: 2rem;
     line-height: 1.5;
     color: rgba(0,0,0,.8);
   }
   
+  .modal__container #project_image_1 {
+    float: left;
+    width: 66%;
+    min-width: 436px;
+    max-width: 600px;
+    /* height: ; */
+    padding-right: 20px;
+    padding-bottom: 20px;
+  }
+
+  .modal__content #project_image_2 {
+    align-self: center;
+    width: 25%;
+    min-width: 240px;
+    /* height: ; */
+    padding: 20px;
+  }
+
+  .modal__content #project_image_3 {
+    align-self: center;
+    width: 60%;
+    min-width: 240px;
+    /* height: ; */
+    padding: 20px;
+}
+
+  .modal__content p {
+    /* width: 34%; */
+    /* min-width: 150px; */
+  }
+
   .modal__btn {
     font-size: .875rem;
     padding-left: 1rem;
@@ -449,6 +482,13 @@ section .title::after{
   .modal__btn:focus, .modal__btn:hover {
     -webkit-transform: scale(1.05);
     transform: scale(1.05);
+  }
+
+  .modal__footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   /* .modal__btn-primary {

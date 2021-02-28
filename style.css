@@ -446,10 +446,10 @@ section .title::after{
     padding: 20px;
 }
 
-  .modal__content p {
-    /* width: 34%; */
-    /* min-width: 150px; */
-  }
+  /* .modal__content p {
+    width: 34%;
+    min-width: 150px;
+  } */
 
   .modal__btn {
     font-size: .875rem;

@@ -164,7 +164,7 @@ section .title::after{
 /* home section styling */
 .home{
     display: flex;
-    background: url("images/duo_color_gimp.png") no-repeat right;
+    background: url("images/duo_color_gimp.webp") no-repeat right;
     background-color: #B5179E;
     height: 100vh;
     color: #fff;

@@ -403,6 +403,11 @@ section .title::after{
     color: #4361EE;
     box-sizing: border-box;
   }
+
+  .modal__title i {
+    font-size: 2rem;
+    padding: 0rem 0.5rem;
+  }
   
   .modal__close {
     background: transparent;
@@ -412,8 +417,6 @@ section .title::after{
   .modal__header .modal__close:before { content: "\2715"; }
   
   .modal__content {
-    /* display: flex; */
-    /* flex-flow: row wrap; */
     margin-top: 2rem;
     margin-bottom: 2rem;
     line-height: 1.5;
@@ -425,31 +428,25 @@ section .title::after{
     width: 66%;
     min-width: 436px;
     max-width: 600px;
-    /* height: ; */
     padding-right: 20px;
     padding-bottom: 20px;
   }
 
   .modal__content #project_image_2 {
-    align-self: center;
     width: 25%;
     min-width: 240px;
-    /* height: ; */
     padding: 20px;
   }
 
   .modal__content #project_image_3 {
-    align-self: center;
     width: 60%;
     min-width: 240px;
-    /* height: ; */
     padding: 20px;
 }
 
-  /* .modal__content p {
-    width: 34%;
-    min-width: 150px;
-  } */
+  .modal__content p {
+    text-align: center;
+  }
 
   .modal__btn {
     font-size: .875rem;
